@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" aria-label="Main navigation">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/">My system</a>
+        <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/myspace/datasource">My space</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/notification">Notifications
+                      <span class="badge bg-light text-dark rounded-pill align-text-bottom">27</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/login">Login</a>
+                </li>
+
+                <li ngbDropdown class="nav-item dropdown ">
+                    <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">username</a>
+                    <ul ngbDropdownMenu class="dropdown-menu " aria-labelledby="dropdown01">
+                        <li><a class="dropdown-item" routerLink="/Profile">Profile </a></li>
+                        <li><a class="dropdown-item" routerLink="/admin/users">Users </a></li>
+                        <li><a class="dropdown-item" routerLink="/admin/regestration">User Registration</a></li>
+                        <li><a class="dropdown-item" (click)="logout()">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
